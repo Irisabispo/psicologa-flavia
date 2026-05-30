@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 html { 
@@ -59,7 +60,7 @@ a {
     margin-bottom: 40px;
 }
 
-section {
+.section {
     padding: 80px 0;
 }
 
@@ -204,6 +205,65 @@ section {
     flex-wrap: wrap;
 }
 
+/*HERO IMAGEM*/
+.hero-image {
+    display: flex;
+    justify-content: center;
+    position: relative; /*-->>>>essa posição estabelecendo uma âncora pra o círculo*/
+}
+
+.hero-image1 {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(139, 94, 76, 0.18);
+
+}
+
+.hero-circle {
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: #f6e9e3;
+    box-shadow: 0 16px 40px rgba(139, 94, 76, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 8px solid #f4d9cf;
+    position: absolute;
+    top: -150px;
+    right: -20px;
+}
+
+.hero-logo { 
+    text-align: center; 
+    padding: 30px; 
+}
+
+.brand-symbol {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    color: #8b5e4c;
+    display: block;
+    line-height: 1;
+}
+
+.brand-s {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    color: #b98a78;
+    margin: 12px 0 8px;
+    font-weight: 500;
+}
+
+.brand-m {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: #8b6f63;
+}
+
+
+
 /*BOTÕES*/
 .btn {
     padding: 14px 28px;
@@ -245,59 +305,6 @@ section {
     justify-content: center; 
 }
 
-/*HERO IMAGEM*/
-.hero-image {
-    display: flex;
-    justify-content: center;
-}
-
-.hero-image1 {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
-    box-shadow: 0 16px 40px rgba(139, 94, 76, 0.18);
-
-}
-
-
-.hero-circle {
-    width: 380px;
-    height: 380px;
-    border-radius: 50%;
-    background: #f6e9e3;
-    box-shadow: 0 16px 40px rgba(139, 94, 76, 0.18);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 8px solid #f4d9cf;
-}
-
-.hero-logo { 
-    text-align: center; 
-    padding: 30px; 
-}
-
-.brand-symbol {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.9rem;
-    color: #8b5e4c;
-    display: block;
-    line-height: 1;
-}
-
-.brand-s {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    color: #b98a78;
-    margin: 12px 0 8px;
-    font-weight: 500;
-}
-
-.brand-m {
-    font-size: 0.65rem;
-    letter-spacing: 2px;
-    color: #8b6f63;
-}
 
 /*SOBRE*/
 .sobre {
@@ -661,12 +668,18 @@ section {
     transform: scale(1.1);
 }
 
-/*RESPONSIVO*/
+/*responsivo para tablets e telas menores até 900px - Exemplos: iPad retrato, Tablets Android, Notebooks pequenos*/
 @media (max-width: 900px) {
     .hero {
         grid-template-columns: 1fr;
         text-align: center;
         padding-top: 100px;
+    }
+
+    .hero-image { /*adicionei por causa do círculo que estava com posição absoluta, agora ele vai se comportar como uma imagem normal dentro do fluxo da página*/
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* garante que o contêiner não ultrapasse a tela */
     }
     
     .hero-subtitle { 
@@ -679,8 +692,12 @@ section {
     }
     
     .hero-circle { 
+        position: static; /* -->>esse remove a posição absoluta para que o círculo fique dentro do fluxo normal da página*/
+        top: auto; /*resetando o valor de top */
+        right: auto; /*resetando o valor right */
         width: 280px; 
         height: 280px; 
+        margin: 20px auto 0; /* dá um respiro entre a foto e o círculo e centraliza o círculo */
     }
     
     .brand-symbol { 
@@ -691,7 +708,7 @@ section {
         grid-template-columns: 1fr; 
     }
 }
-
+/*responsivo para celulares maiores e tablets pequenos de ate 700px-Exemplos: iPhone XR, iPhone 12 Pro, Galaxy A54, Redmi Note */
 @media (max-width: 700px) {
     .menu-toggle { 
         display: flex; 
@@ -718,7 +735,7 @@ section {
         padding: 60px 0; 
     }
 }
-
+/*responsivo para celulares pequenininhos até 480px- exemplos: Exemplos: iPhone SE, Galaxy antigos, Telas compactas*/
 @media (max-width: 480px) {
     .hero-buttons { 
         flex-direction: column; 
