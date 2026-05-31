@@ -452,8 +452,8 @@ a {
     background: #fdf6f1;
     text-align: center;
 }
-
-.contato-wrapper {
+/*esse contato-wrapper é a primeira regra*/
+.contato-wrapper { /*essa classe organiza o conteúdo do contato em 2 colunas, uma para as informações e outra para o formulário*/
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 40px;
@@ -704,7 +704,7 @@ a {
         font-size: 4rem; 
     }
     
-    .contato-wrapper { 
+    .contato-wrapper { /* essa regra é a segunda e ela obrescreve a primeira*/
         grid-template-columns: 1fr; 
     }
 }

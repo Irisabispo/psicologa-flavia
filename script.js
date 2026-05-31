@@ -27,7 +27,7 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => navMenu.classList.remove('active'));
 });
 
-// BOTÕES HERO 
+// Botões da hero
 const btnAgendar = document.getElementById('btnAgendar');
 btnAgendar.addEventListener('click', () => {
     document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
@@ -41,7 +41,7 @@ btnSaberMais.addEventListener('click', () => {
     window.open(`https://wa.me/${CONFIG.whatsapp}?text=${mensagem}`, '_blank');
 });
 
-// FORMULÁRIO
+// Formulário
 const form        = document.getElementById('formAgendamento');
 const formFeedback = document.getElementById('formFeedback');
 
