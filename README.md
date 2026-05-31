@@ -10,10 +10,6 @@ landing-flavia-custodio/
 └── README.md       → Este arquivo
 ```
 
-## 🚀 Como usar
-
-1. Baixe os 3 arquivos (`index.html`, `styles.css`, `script.js`) e coloque na mesma pasta.
-2. Abra o `index.html` no navegador. Pronto, está funcionando.
 
 ## 📱 Recursos incluídos
 
