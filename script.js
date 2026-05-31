@@ -98,10 +98,10 @@ function showFeedback(mensagem, tipo) {
     }, 5000);
 }
 
-//FOOTER
+//Footer
 document.getElementById('anoAtual').textContent = new Date().getFullYear();
 
-//MÁSCARA DE TELEFONE 
+//Máscara de telefone, 
 const telefoneInput = document.getElementById('telefone');
 telefoneInput.addEventListener('input', (e) => {
     let v = e.target.value.replace(/\D/g, '');
