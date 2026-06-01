@@ -1,10 +1,11 @@
 /* Estilos para o site da psicóloga Flávia */
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 html { 
@@ -306,6 +307,20 @@ a {
     justify-content: center; 
 }
 
+/* um bloquinho de transição compartilhado para os elementos que tem hover, para mais suavidade*/
+.btn-primary,
+.btn-secondary,
+.sobre-card,
+.servico-item,
+.publico-card,
+.footer-social a,
+.float-whatsapp {
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
 
 /*SOBRE*/
 .sobre {
