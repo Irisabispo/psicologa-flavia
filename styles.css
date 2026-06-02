@@ -211,7 +211,7 @@ a {
 .hero-image {
     display: flex;
     justify-content: center;
-    position: relative; /*-->>>>essa posição estabelecendo uma âncora pra o círculo*/
+    position: relative; 
 }
 
 .hero-image1 {
@@ -326,13 +326,40 @@ a {
 .sobre {
     background: white;
     text-align: center;
+    padding: 80px 0;
 }
 
-.sobre-image {
+.sobre-image {  /*controla a aparência da imagem*/
     border-radius: 50px;
     width: 100%;
     max-width: 300px;
-    margin: 0 auto;
+}
+/*NOVOOOOOOOS-----------------------------------------*/
+.container-sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.sobre-image-wrapper { /*layout, largura, alinhamento, posição*/
+    margin-top: 40px;
+    margin-left: auto; /*centraliza a imagem horizontalmente dentro do grid*/
+    margin-right: auto; /*esse também*/
+    position: relative;
+}
+
+.sobre-text-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    color: #794733;
+}
+
+.sobre-text {
+    max-width: 400px;
+    color: #8b5e4c;
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .sobre-grid {
@@ -377,6 +404,7 @@ a {
 .servicos {
     background: #f4d9cf;
     text-align: center;
+    padding: 80px 0;
 }
 
 .servicos-grid {
@@ -769,6 +797,11 @@ a {
         justify-content: center; 
     }
     
+    .container-sobre {
+        grid-template-columns: 1fr;
+        
+    }
+
     .hero-circle { 
         width: 240px; 
         height: 240px; 
