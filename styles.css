@@ -1,5 +1,59 @@
-/* Estilos para o site da psicóloga Flávia */
+/*fonts*/ 
+@font-face { /*o @fontface é a forma padrão de registrar fontes locais no CSS*/
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-display: swap;
+}
 
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('./fonts/Cormorant-Garamond/CormorantGaramond-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('./fonts/Cormorant-Garamond/CormorantGaramond-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('./fonts/Cormorant-Garamond/CormorantGaramond-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cormorant Garamond';
+    src: url('./fonts/Cormorant-Garamond/CormorantGaramond-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -36,7 +90,7 @@ a {
     padding: 0 24px;
 }
 
-/*TIPOGRAFIA*/
+/*tipografia*/
 .section-tag {
     display: inline-block;
     font-size: 2rem;
@@ -66,7 +120,7 @@ a {
     padding: 80px 0;
 }
 
-/*NAVBAR*/
+/*navbar*/
 .navbar {
     position: fixed;
     top: 0; 
@@ -154,7 +208,7 @@ a {
     background: #8b5e4c;
 }
 
-/*HERO*/
+/*hero*/
 .hero {
     min-height: 100vh;
     padding-top: 120px;
@@ -207,7 +261,7 @@ a {
     flex-wrap: wrap;
 }
 
-/*HERO IMAGEM*/
+/*hero imagem*/
 .hero-image {
     display: flex;
     justify-content: center;
@@ -266,7 +320,7 @@ a {
 
 
 
-/*BOTÕES*/
+/*botões*/
 .btn {
     padding: 14px 28px;
     border: none;
@@ -322,7 +376,7 @@ a {
         box-shadow 0.3s ease;
 }
 
-/*SOBRE*/
+/*sobre*/
 .sobre {
     background: white;
     text-align: center;
@@ -334,7 +388,7 @@ a {
     width: 100%;
     max-width: 300px;
 }
-/*NOVOOOOOOOS-----------------------------------------*/
+
 .container-sobre {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -400,7 +454,7 @@ a {
     font-size: 0.95rem;
 }
 
-/*SERVIÇOS*/
+/*serviços*/
 .servicos {
     background: #f4d9cf;
     text-align: center;
@@ -453,7 +507,7 @@ a {
     font-size: 0.88rem;
 }
 
-/* PÚBLICO*/
+/*público*/
 .publico {
     background: white;
     text-align: center;
@@ -498,7 +552,7 @@ a {
     color: white;
 }
 
-/*CONTATO*/
+/*contato*/
 .contato {
     background: #fdf6f1;
     text-align: center;
@@ -559,7 +613,7 @@ a {
     color: #8b5e4c; 
 }
 
-/*FORMULÁRIO*/
+/*formulário*/
 .contato-form {
     background: white;
     padding: 32px;
@@ -629,7 +683,31 @@ a {
     color: #c62828;
 }
 
-/*FOOTER*/
+
+.mapa {
+    background: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.mapa-wrapper {
+    margin-top:30px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(139, 94, 76, 0.12);
+}
+
+.mapa-wrapper iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+
+
+
+
+/*footer*/
 .footer {
     background: #8b5e4c;
     color: white;
@@ -697,7 +775,7 @@ a {
     opacity: 0.85;
 }
 
-/*BOTÃO WHATSAPP FLUTUANTE*/
+/*botão whatsapp flutuante*/
 .float-whatsapp {
     position: fixed;
     bottom: 24px;
