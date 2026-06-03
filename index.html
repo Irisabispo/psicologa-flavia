@@ -5,17 +5,19 @@
 <head> <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Psicóloga Flávia Juliana Custódio da Paz - CRP 14/08720-9. Atendimento presencial e online em Ivinhema/MS. Crianças, adolescentes e adultos.">
+    <meta name="description" content="Psicóloga Flávia Juliana Custódio da Paz - CRP 14/08720-9. Atendimento psicológico presencial em Ivinhema/MS e online. Psicoterapia para crianças, adolescentes e adultos.">
     <!--política de segurança de conteúdo-->
     <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
-    img-src 'self' data:;
-    style-src 'self' 'unsafe-inline';
+    img-src 'self';
+    style-src 'self';
     font-src 'self';
     script-src 'self';
     frame-src https://www.google.com https://maps.google.com;
     object-src 'none'; 
-    base-uri 'self';">
+    base-uri 'self';
+    form-action 'self';
+    ">
 <!-- object-src bloqueia objetos antigos -->
 <!--base-uri 'self' impede ataques usando a tag base-->
 
@@ -41,7 +43,8 @@
             </div>
 
             <!-- botão hamburguinho-->
-            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            <!--aria-expanded="false" para indicar que o menu está fechado, importante para acessibilidade em menus móveis-->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
                 <span></span><span></span><span></span>
             </button>
 
@@ -78,7 +81,12 @@
         </div>
 
         <div class="hero-image">                
-            <img src="assets/contentamento.jpg" alt="uma mulher em estado de contentamento" class="hero-image1">
+            <img 
+                src="assets/contentamento.jpg" 
+                alt="Psicóloga Flávia Juliana Custódio da Paz sentada em uma cadeira, sorrindo e transmitindo acolhimento, leveza e bem-estar."
+                class="hero-image1"
+                width="2272"
+                height="3408">
             <div class="hero-circle">
                 <div class="hero-logo">
                     <span class="brand-symbol">Ψ</span>
@@ -101,7 +109,13 @@
             
         <div class="container-sobre">
             <div class="sobre-image-wrapper">      <!-- loading="lazy" -imagem só carrega quando estiver prestes a aparecer na tela-->
-                <img src="assets/presenca.jpg" loading="lazy" alt="Psicóloga Flávia Juliana Custódio da Paz sentada em seu consultório, com a mão no queixo e um sorriso discreto" class="sobre-image">
+                <img 
+                    src="assets/presenca.jpg" 
+                    loading="lazy" 
+                    alt="Psicóloga Flávia Juliana Custódio da Paz sentada em seu consultório, com a mão no queixo e um sorriso discreto" 
+                    class="sobre-image"
+                    width="1960"
+                    height="2940">
             </div>
                 <div class="sobre-text">
                     <span class="sobre-text-title">Um pouco além da psicologia</span>
@@ -124,7 +138,7 @@
                 <div class="sobre-card">
                     <i class="fa-solid fa-brain"></i>
                     <h3>Mais técnica, mesmo acolhimento</h3>
-                    <p>Pós-graduanda em Neuropsicologia, unindo atualização científica e cuidado humanizado. </p>
+                    <p>Atualmente cursando pós-graduação em Neuropsicologia, com foco em atualização científica e cuidado humanizado.</p>
                 </div>
                 <div class="sobre-card">
                     <i class="fas fa-hospital-user"></i>
@@ -276,7 +290,7 @@
                         <label for="telefone">Telefone / WhatsApp</label>
                         <input type="tel" id="telefone" name="telefone" autocomplete="tel" required>
                     </div>
-
+                
                     <div class="form-group">
                         <label for="modalidade">Modalidade</label>
                         <select id="modalidade" name="modalidade" required>
@@ -285,16 +299,26 @@
                             <option value="online">Online</option>
                         </select>
                     </div>
-
                     <div class="form-group">
                         <label for="mensagem">Mensagem (opcional)</label>
                         <textarea id="mensagem" name="mensagem" rows="4" maxlength="500"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <i class="fas fa-paper-plane"></i> Enviar solicitação
-                    </button>
+                        <!-- HONEYPOT -->
+                    <div class="honeypot-field" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input
+                            type="text"
+                            id="website"
+                            name="website"
+                            autocomplete="off"
+                            tabindex="-1">
+                    </div>
 
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> 
+                        Enviar solicitação
+                    </button>
                     <!-- feedback -->
                     <div id="formFeedback" class="form-feedback" role="status" aria-live="polite"></div>
                 </form>
@@ -308,7 +332,9 @@
         <span class="section-tag">LOCALIZAÇÃO</span>
         <h2 class="section-title">Onde Me Encontrar</h2>
         <div class="mapa-wrapper">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29530.54869222991!2d-53.8453674!3d-22.3037879!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948ebb006ec71f0f%3A0x5dc5f44d82bafe86!2zUHNpY8OzbG9nYSBGbMOhdmlhIEN1c3TDs2Rpbw!5e0!3m2!1spt-BR!2sbr!4v1780435019799!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29530.54869222991!2d-53.8453674!3d-22.3037879!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948ebb006ec71f0f%3A0x5dc5f44d82bafe86!2zUHNpY8OzbG9nYSBGbMOhdmlhIEN1c3TDs2Rpbw!5e0!3m2!1spt-BR!2sbr!4v1780435019799!5m2!1spt-BR!2sbr" 
+            allowfullscreen="" 
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>

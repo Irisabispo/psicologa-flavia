@@ -5,7 +5,7 @@ const CONFIG = {
   instagram: "psicologa_flavia_custodio",
 };
 
-// NAVBAR
+// navbar
 const navbar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
@@ -19,16 +19,31 @@ window.addEventListener("scroll", () => {
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
-if (menuToggle) {
-  //acrescentei essa verificação para evitar erros caso o elemento não exista hehehehe
+if (menuToggle && navMenu) {
+  menuToggle.setAttribute("aria-expanded", "false");
+
   menuToggle.addEventListener("click", () => {
     navMenu.classList.toggle("active");
-  });
-}
 
+    const expanded = navMenu.classList.contains("active");
+    menuToggle.setAttribute("aria-expanded", expanded);
+  })
+
+// Fechar menu com ESC e também para melhorar a acessibilidade, permitindo que o usuário feche o menu usando a tecla ESC
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        navMenu.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  // esse fecha o menu quando o usuário clica em um link, melhora a experiência em dispositivos móveis
 document.querySelectorAll(".nav-menu a").forEach((link) => {
-  link.addEventListener("click", () => navMenu.classList.remove("active"));
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
 });
+}
 
 // Botões da hero
 const btnAgendar = document.getElementById("btnAgendar");
@@ -62,7 +77,14 @@ if (form) {
   // e mais essa verificação para evitar erros caso o elemento não exista
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
+// Honeypot para evitar spam, um muro baixo
+const website = document.getElementById("website");
+// Se o campo "website" tiver algum valor, é provável que seja um bot, então não processamos o formulário
+if (website && website.value.trim() !== "") {
+  return;
+}
+//até aqui o honeypot
+// Coletando os dados do formulário
     const dados = {
       nome: document.getElementById("nome").value.trim(),
       email: document.getElementById("email").value.trim(),
@@ -70,7 +92,7 @@ if (form) {
       modalidade: document.getElementById("modalidade").value,
       mensagem: document.getElementById("mensagem").value.trim(),
     };
-
+// Validação básica dos campos 
     if (!dados.nome || !dados.email || !dados.telefone || !dados.modalidade) {
       showFeedback(
         "Por favor, preencha todos os campos obrigatórios.",
@@ -78,15 +100,30 @@ if (form) {
       );
       return;
     }
+// Validação de e-mail e telefone mais robusta, para garantir que os dados sejam válidos antes de enviar para o WhatsApp
+if (!validarEmail(dados.email)) {
+  showFeedback("Por favor, insira um e-mail válido.", "error");
+  return;
+}
+if (!validarNome(dados.nome)) {
+  showFeedback(
+    "Informe nome e sobrenome usando apenas letras.",
+    "error"
+  );
+  return;
+}
 
-    if (!validarEmail(dados.email)) {
-      showFeedback("Por favor, insira um e-mail válido.", "error");
-      return;
-    }
+if (!validarTelefone(dados.telefone)) {
+  showFeedback(
+    "Informe um celular válido com DDD.",
+    "error"
+  );
+  return;
+}
 
-    enviarViaWhatsApp(dados);
-    showFeedback(
-      "Solicitação enviada! Em breve entraremos em contato. 💜",
+enviarViaWhatsApp(dados);
+showFeedback(
+      "Solicitação enviada! Em breve entraremos em contato.",
       "success",
     );
     form.reset();
@@ -114,6 +151,36 @@ function validarEmail(email) {
   return regex.test(email);
 }
 
+function validarNome(nome) {
+  const nomeLimpo = nome.trim();
+  const palavras = nomeLimpo.split(/\s+/);
+
+if (palavras.length < 2) {
+  return false;
+}
+//para garantir que tenha nome e sobrenome, e que tenha apenas letras, acentos e espaços
+//o regex permite letras maiúsculas e minúsculas, nomes com hífen ou apóstrofo
+  const regex = /^[A-Za-zÀ-ÿ]+(?:[ '-][A-Za-zÀ-ÿ]+)*$/;
+
+  return regex.test(nomeLimpo);
+}
+
+function validarTelefone(telefone) {
+  const numeros = telefone.replace(/\D/g, "");
+
+  // celular brasileiro: 11 dígitos
+  if (numeros.length !== 11) {
+    return false;
+  }
+
+  // DDD + 9 + 8 dígitos
+  const regex = /^[1-9]{2}9\d{8}$/;
+
+  return regex.test(numeros);
+}
+
+
+
 function showFeedback(mensagem, tipo) {
   formFeedback.textContent = mensagem;
   formFeedback.className = `form-feedback ${tipo}`;
@@ -125,7 +192,11 @@ function showFeedback(mensagem, tipo) {
 }
 
 //Footer
-document.getElementById("anoAtual").textContent = new Date().getFullYear();
+const anoAtual = document.getElementById("anoAtual");
+
+if (anoAtual) {
+  anoAtual.textContent = new Date().getFullYear();
+}
 
 //Máscara de telefone,
 const telefoneInput = document.getElementById("telefone");

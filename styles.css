@@ -270,11 +270,24 @@ a {
 
 .hero-image1 {
     width: 100%;
-    max-width: 400px;
+    max-width: 420px;
+    height: 520px;
+    object-fit: cover; /*corta excesso vertical, imagem com cara de card premium*/
     border-radius: 20px;
     box-shadow: 0 16px 40px rgba(139, 94, 76, 0.18);
 
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideInHero 0.7s ease forwards;
 }
+
+@keyframes fadeSlideInHero {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .hero-circle {
     width: 380px;
@@ -384,22 +397,34 @@ a {
 }
 
 .sobre-image {  /*controla a aparência da imagem*/
-    border-radius: 50px;
     width: 100%;
-    max-width: 300px;
+    max-width: 380px;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 30px;
+
+    transition: transform 0.6s ease, filter 0.6s ease;
+    will-change: transform;
 }
 
 .container-sobre {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 40px;
 }
 
 .sobre-image-wrapper { /*layout, largura, alinhamento, posição*/
-    margin-top: 40px;
-    margin-left: auto; /*centraliza a imagem horizontalmente dentro do grid*/
-    margin-right: auto; /*esse também*/
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* essencial para o zoom não vazar */
+    border-radius: 30px;
+}
+/*ALGO NOVO: HOVER SUAVE*/
+.sobre-image-wrapper:hover .sobre-image {
+    transform: scale(1.05);
+    filter: brightness(1.03);
 }
 
 .sobre-text-title {
@@ -884,4 +909,9 @@ a {
         width: 240px; 
         height: 240px; 
     }
+}
+/*honeypot para evitar spam*/
+.honeypot-field {
+    position: absolute;
+    left: -9999px;
 }
