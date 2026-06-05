@@ -382,7 +382,7 @@ a {
 .publico-card,
 .footer-social a,
 .float-whatsapp {
-    transition:
+    transition:     /*transition reage a um gatilho externo, hover ou clique, de forma suave*/
         transform 0.3s ease,
         background-color 0.3s ease,
         color 0.3s ease,
@@ -728,10 +728,6 @@ a {
     border: 0;
 }
 
-
-
-
-
 /*footer*/
 .footer {
     background: #8b5e4c;
@@ -815,12 +811,27 @@ a {
     justify-content: center;
     font-size: 1.8rem;
     box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-    z-index: 999;
+    z-index: 999; 
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 .float-whatsapp:hover {
     transform: scale(1.1);
+    animation-play-state: paused; /*pausa o pulse quando o mouse estiver em cima do botão*/
 }
+
 
 /*responsivo para tablets e telas menores até 900px - Exemplos: iPad retrato, Tablets Android, Notebooks pequenos*/
 @media (max-width: 900px) {
