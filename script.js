@@ -123,8 +123,8 @@ if (!validarTelefone(dados.telefone)) {
 
 enviarViaWhatsApp(dados);
 showFeedback(
-      "Solicitação enviada! Em breve entraremos em contato.",
-      "success",
+      `Obrigado ${dados.nome}! Em breve entraremos em contato.`,
+      `success`,
     );
     form.reset();
   });
