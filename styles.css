@@ -288,11 +288,11 @@ a {
     }
 }
 
-
-.hero-circle {
-    width: 380px;
-    height: 380px;
-    border-radius: 50%;
+/*o circulo*/
+.hero-circle { 
+    width: 320px; /*diminuir ou aumentar o circulo...*/
+    height: 320px; /*...e ambos os valores devem ser iguais*/
+    border-radius: 50%; /*quadrado em circulo*/
     background: #f6e9e3;
     box-shadow: 0 16px 40px rgba(139, 94, 76, 0.18);
     display: flex;
@@ -308,27 +308,27 @@ a {
     text-align: center; 
     padding: 30px; 
 }
-
+/*esse simbolo: Ψ*/
 .brand-symbol {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.9rem;
+    font-size: 2rem;
     color: #8b5e4c;
     display: block;
     line-height: 1;
 }
-
+/* a primeira frase dentro do circulo*/
 .brand-s {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.25rem;
-    color: #b98a78;
+    font-size: 1.35rem;
+    color: #8b5e4c;
     margin: 12px 0 8px;
     font-weight: 500;
 }
-
+/*a segunda frase dentro  do circulo*/
 .brand-m {
-    font-size: 0.65rem;
+    font-size: 0.85rem;
     letter-spacing: 2px;
-    color: #8b6f63;
+    color: #8b5e4c;
 }
 
 
@@ -899,15 +899,23 @@ a {
         position: static; /* -->>esse remove a posição absoluta para que o círculo fique dentro do fluxo normal da página*/
         top: auto; /*resetando o valor de top */
         right: auto; /*resetando o valor right */
-        width: 280px; 
-        height: 280px; 
-        margin: 20px auto 0; /* dá um respiro entre a foto e o círculo e centraliza o círculo */
+        width: 380px; 
+        height: 380px; 
+        margin: 60px auto 0; /* dá um respiro entre a foto e o círculo e centraliza o círculo */
     }
     
     .brand-symbol { 
-        font-size: 4rem; 
+        font-size: 2rem; 
     }
     
+    .brand-s {
+        font-size: 2rem;
+    }
+
+    .brand-m {
+        font-size: 0.85rem;
+    }
+
     .contato-wrapper { /* essa regra é a segunda e ela obrescreve a primeira*/
         grid-template-columns: 1fr; 
     }
@@ -935,6 +943,24 @@ a {
         transform: translateY(0); 
     }
     
+    .hero-circle { 
+        width: 380px; 
+        height: 380px; 
+    } 
+
+    .brand-symbol { 
+        font-size: 2rem; 
+    }
+    
+    .brand-s {
+        font-size: 1.90rem;
+
+    }
+
+    .brand-m {
+        font-size: 0.95rem;
+    }
+
     section { 
         padding: 60px 0; 
     }
@@ -956,8 +982,20 @@ a {
     }
 
     .hero-circle { 
-        width: 240px; 
-        height: 240px; 
+        width: 320px; 
+        height: 320px; 
+    }
+    .brand-symbol { 
+        font-size: 1.6rem; 
+    }
+    
+    .brand-s {
+        font-size: 1.2rem;
+
+    }
+
+    .brand-m {
+        font-size: 0.75rem;
     }
 }
 /*honeypot para evitar spam*/

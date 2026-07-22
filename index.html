@@ -2,12 +2,13 @@
 <!--LANDING PAGE - PSICÓLOGA FLÁVIA CUSTÓDIO -->
 <!--Projeto Desenvolvido por Iris Bispo - 2026 -->
 <html lang="pt-BR">
+
 <head> <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Psicóloga Flávia Juliana Custódio da Paz. Atendimento psicológico presencial em Ivinhema/MS e online. Psicoterapia para crianças, adolescentes e adultos.">
     
-<!--í<cone-->
+<!--favicon-->
     <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="./favicon.ico" />
@@ -16,9 +17,52 @@
 
     <title>Flávia Custódio - Psicóloga Clínica | CRP 14/08720-9</title>
 
-                        <!-- ícones de fontawesome -->
-    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
-    <!--ligação com o css-->
+<!-- ícones de font awesome deferido para não bloquear render-->
+    <link rel="stylesheet" 
+          href="./assets/fontawesome/css/all.min.css"
+          media="print"
+          onload="this.media='all'">
+
+<!--CSS crítico (só hero - inline) e esse "crítico" é: hero aparece imediatamente porque o CSS crítico já está no HTML-->
+        <style>
+            body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+            .hero {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                padding: 120px 24px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .hero-title {
+                font-size: 4rem;
+                line-height: 1.1;
+            }
+
+            .hero-buttons {
+                display: flex;
+                gap: 16px;
+        }
+
+            .hero-image {
+                display: flex;
+                justify-content: center;
+            }
+
+            .hero-image1 {
+                width: 100%;
+                max-width: 420px;
+                height: 520px;
+                object-fit: cover;
+            }
+        </style>
+
+    <!-- CSS completo (não bloqueia mais a renderização)-->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -50,7 +94,69 @@
         </div>
     </nav>
 <main> <!-- conteúdo principal da página, para melhorar semântica, acessibilidade e SEO -->
-    <!-- hero -->
+    <section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">CRP 14/08720-9</span>
+
+        <h1 class="hero-title">
+            Flávia Custódio <em>Psicóloga Clínica em Ivinhema</em>
+        </h1>
+
+        <h2 class="hero-subtitle">
+            Um espaço para cuidar da sua mente
+        </h2>
+
+        <div class="hero-buttons">
+
+            <button class="btn btn-primary" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M7 2v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-2V2h-2v2H9V2H7zm12 18H5V9h14v11z"/>
+                </svg>
+                Agendar Sessão
+            </button>
+
+            <button class="btn btn-secondary" type="button">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm1-6h-2v-7h2v7z"/>
+                </svg>
+                Saber Mais
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img
+            src="assets/contentamento295.jpg"
+            alt="Psicóloga Flávia Custódio em ambiente acolhedor"
+            class="hero-image1"
+            width="420"
+            height="520"
+            fetchpriority="high"
+            decoding="async"
+            loading="eager"
+        >
+
+        <div class="hero-circle">
+            <div class="hero-logo">
+                <span class="brand-symbol">Ψ</span>
+                <p class="brand-s">Sua história merece cuidado.</p>
+                <span class="brand-m">mais equilíbrio ⭑ mais você</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+  
+  
+  
+  
+    <!-- hero 
     <section class="hero" id="inicio">
         <div class="hero-content">
             <span class="hero-tag">CRP 14/08720-9</span>
@@ -61,7 +167,7 @@
             Um espaço para cuidar da sua mente
             </h2>
             
-    <!-- botões -->
+    <!-- botões 
             <div class="hero-buttons">
                 <button class="btn btn-primary" id="btnAgendar">
                     <i class="fas fa-calendar-check"></i> Agendar Sessão
@@ -71,14 +177,17 @@
                 </button>
             </div>
         </div>
-
+        
         <div class="hero-image">                
             <img 
-                src="assets/contentamento.jpg" 
+                src="assets/contentamento295.jpg" 
                 alt="Psicóloga Flávia Juliana Custódio da Paz sentada em uma cadeira, sorrindo e transmitindo acolhimento, leveza e bem-estar."
                 class="hero-image1"
-                width="2272"
-                height="3408">
+                width="420"
+                height="520"
+                loading="eager"
+                fetchpriority="high">
+
             <div class="hero-circle">
                 <div class="hero-logo">
                     <span class="brand-symbol">Ψ</span>
@@ -87,7 +196,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- sobre-->
     <section class="sobre" id="sobre">
@@ -102,12 +211,14 @@
         <div class="container-sobre">
             <div class="sobre-image-wrapper">      <!-- loading="lazy" -imagem só carrega quando estiver prestes a aparecer na tela-->
                 <img 
-                    src="assets/presenca.jpg" 
+                    src="assets/presenca247.jpg" 
                     loading="lazy" 
+                    decoding="async"
+                    width="600"
+                    height="900"
                     alt="Psicóloga Flávia Juliana Custódio da Paz sentada em seu consultório, com a mão no queixo e um sorriso discreto" 
                     class="sobre-image"
-                    width="1960"
-                    height="2940">
+                    >
             </div>
                 <div class="sobre-text">
                     <span class="sobre-text-title">Um pouco além da psicologia</span>
@@ -327,9 +438,14 @@
         <span class="section-tag">LOCALIZAÇÃO</span>
         <h2 class="section-title">Onde Me Encontrar</h2>
         <div class="mapa-wrapper">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29530.54869222991!2d-53.8453674!3d-22.3037879!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948ebb006ec71f0f%3A0x5dc5f44d82bafe86!2zUHNpY8OzbG9nYSBGbMOhdmlhIEN1c3TDs2Rpbw!5e0!3m2!1spt-BR!2sbr!4v1780435019799!5m2!1spt-BR!2sbr" 
-            allowfullscreen="" 
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29530.54869222991!2d-53.8453674!3d-22.3037879!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948ebb006ec71f0f%3A0x5dc5f44d82bafe86!2zUHNpY8OzbG9nYSBGbMOhdmlhIEN1c3TDs2Rpbw!5e0!3m2!1spt-BR!2sbr!4v1780435019799!5m2!1spt-BR!2sbr" 
+              title="Mapa de localização da clínica da psicóloga Flávia Custódio em Ivinhema"
+              width="100%"
+              height="350"
+              loading="lazy" 
+              allowfullscreen="" 
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>
