@@ -835,6 +835,55 @@ a {
     opacity: 0.85;
 }
 
+.creditos {
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+    font-size: .8rem;
+    opacity: .45;
+    transition: opacity .25s ease;
+    margin-left: .2rem;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.creditos:hover,
+.creditos:focus {
+    opacity: 1;
+}
+
+.creditos::after {
+    content: attr(data-tooltip);
+
+    position: absolute;
+    bottom: 140%;
+    right: 0;
+
+    width: max-content;
+    max-width: 220px;
+
+    padding: .45rem .7rem;
+
+    border-radius: 8px;
+
+    background: #2b2b2b;
+    color: #fff;
+
+    font-size: .72rem;
+    line-height: 1.4;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(6px);
+
+    transition: .25s;
+}
+
+.creditos:hover::after,
+.creditos:focus::after{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /*botão whatsapp flutuante*/
 .float-whatsapp {
     position: fixed;
