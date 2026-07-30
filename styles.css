@@ -1013,7 +1013,41 @@ a {
     section { 
         padding: 60px 0; 
     }
+
+
+    .contato {
+        text-align: center;
+        }
+    .contato-wrapper {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-top: 32px;
+        text-align: left;
+    }
+    .info-item {
+        padding: 18px;
+        gap: 14px;
+    }
+    .info-item i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+        
+
+    .info-item strong {
+        font-size: 1rem;
+    }
+
+    .info-item a,
+    .info-item span {
+        font-size: 0.9rem;
+        word-break: break-word;
+    }
+
 }
+
+
 /*responsivo para celulares pequenininhos até 480px- exemplos: Exemplos: iPhone SE, Galaxy antigos, Telas compactas*/
 @media (max-width: 480px) {
     .hero-buttons { 
