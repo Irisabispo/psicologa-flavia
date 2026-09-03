@@ -343,11 +343,10 @@ a {
     }
 }
 
-/*o circulo*/
 .hero-circle { 
     width: 320px; /*diminuir ou aumentar o circulo...*/
     height: 320px; /*...e ambos os valores devem ser iguais*/
-    border-radius: 50%; /*quadrado em circulo*/
+    border-radius: 50%;
     background: #f6e9e3;
     box-shadow: 0 16px 40px rgba(139, 94, 76, 0.18);
     display: flex;
@@ -355,10 +354,11 @@ a {
     justify-content: center;
     border: 8px solid #f4d9cf;
     position: absolute;
-    top: -150px;
-    right: -20px;
+    top: -100px;
+    right: 10px;
 
     transform: translateX(5px);
+    
     animation: floatCircle 3s ease-in-out infinite;
 }
 
