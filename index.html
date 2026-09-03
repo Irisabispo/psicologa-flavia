@@ -1,24 +1,21 @@
 <!DOCTYPE html>
-<!--LANDING PAGE - PSICÓLOGA FLÁVIA CUSTÓDIO -->
-<!--Projeto Desenvolvido por Iris Bispo - 2026 -->
+<!-- LANDING PAGE - PSICÓLOGA FLÁVIA CUSTÓDIO -->
+<!-- Projeto Desenvolvido por Iris Bispo - 2026 -->
 <html lang="pt-BR">
-
-<head> <!-- Configurações básicas da página -->
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Psicóloga Flávia Juliana Custódio da Paz. Atendimento psicológico presencial em Ivinhema/MS e online. Psicoterapia para crianças, adolescentes e adultos.">
-    
 <!--favicon-->
     <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
-
     <title>Flávia Custódio - Psicóloga Clínica | CRP 14/08720-9</title>
+<!-- ícones de font awesome -->
+    <link rel="preload" href="./assets/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./assets/fontawesome/css/all.min.css"></noscript>
 
-<!-- ícones de font awesome deferido para não bloquear render-->
-    <link rel="stylesheet" 
-          href="./assets/fontawesome/css/all.min.css">
 <!--CSS crítico (só hero - inline) e esse "crítico" é: hero aparece imediatamente porque o CSS crítico já está no HTML-->
         <style>
             body {
@@ -58,24 +55,26 @@
             }
         </style>
 
-    <!-- CSS completo (não bloqueia mais a renderização)-->
-    <link rel="stylesheet" href="styles.css">
+    <!-- CSS -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
 </head>
 <body>
-
-    <!--nav-->
+<a href="#inicio" class="skip-link">Pular para o conteúdo principal</a>
+    <!-- NAV -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="logo">
+
+            <a href="#inicio" class="logo">
                 <span class="logo-symbol">Ψ</span>
                 <div class="logo-text">
                     <span class="logo-name">Flávia Custódio</span>
                     <span class="logo-sub">Psicóloga Clínica</span>
                 </div>
-            </div>
+            </a>
+            
 
-            <!-- botão hamburguinho-->
-            <!--aria-expanded="false" para indicar que o menu está fechado, importante para acessibilidade em menus móveis-->
+            <!-- aria-expanded="false" para indicar que o menu está fechado, importante para acessibilidade em menus móveis -->
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
                 <span></span><span></span><span></span>
             </button>
@@ -91,21 +90,15 @@
     </nav>
 <main> <!-- conteúdo principal da página, para melhorar semântica, acessibilidade e SEO -->
     <section class="hero" id="inicio">
-
     <div class="hero-content">
-
         <span class="hero-tag">CRP 14/08720-9</span>
-
         <h1 class="hero-title">
             Flávia Custódio <em>Psicóloga Clínica em Ivinhema</em>
         </h1>
-
         <h2 class="hero-subtitle">
-            Um espaço para cuidar da sua mente
+            Um espaço seguro para escutar, acolher e ressignificar a sua história
         </h2>
-
         <div class="hero-buttons">
-
             <button class="btn btn-primary" type="button">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M7 2v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-2V2h-2v2H9V2H7zm12 18H5V9h14v11z"/>
@@ -119,17 +112,13 @@
                 </svg>
                 Saber Mais
             </button>
-
         </div>
-
     </div>
-
     <div class="hero-image">
-
         <img
             src="assets/contentamento295.jpg"
             alt="Psicóloga Flávia Custódio em ambiente acolhedor"
-            class="hero-image1"
+            class="hero-photo"
             width="420"
             height="520"
             fetchpriority="high"
@@ -139,60 +128,12 @@
 
         <div class="hero-circle">
             <div class="hero-logo">
-                <span class="brand-symbol">Ψ</span>
-                <p class="brand-s">Sua história merece cuidado.</p>
-                <span class="brand-m">mais equilíbrio ⭑ mais você</span>
+                <p class="brand-s">Quando a escuta acolhe,</p>
+                <span class="brand-m">a mente respira</span>
             </div>
         </div>
-
     </div>
-
 </section>
-  
-  
-  
-  
-    <!-- hero 
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <span class="hero-tag">CRP 14/08720-9</span>
-            <h1 class="hero-title">
-                Flávia Custódio - Psicóloga Clínica em <em>Ivinhema</em>
-            </h1>
-            <h2 class="hero-subtitle">
-            Um espaço para cuidar da sua mente
-            </h2>
-            
-    <!-- botões 
-            <div class="hero-buttons">
-                <button class="btn btn-primary" id="btnAgendar">
-                    <i class="fas fa-calendar-check"></i> Agendar Sessão
-                </button>
-                <button class="btn btn-secondary" id="btnSaberMais">
-                    <i class="fas fa-info-circle"></i> Quero Saber Mais
-                </button>
-            </div>
-        </div>
-        
-        <div class="hero-image">                
-            <img 
-                src="assets/contentamento295.jpg" 
-                alt="Psicóloga Flávia Juliana Custódio da Paz sentada em uma cadeira, sorrindo e transmitindo acolhimento, leveza e bem-estar."
-                class="hero-image1"
-                width="420"
-                height="520"
-                loading="eager"
-                fetchpriority="high">
-
-            <div class="hero-circle">
-                <div class="hero-logo">
-                    <span class="brand-symbol">Ψ</span>
-                    <p class="brand-s">Sua história merece <br>cuidado.</p>
-                    <span class="brand-m">mais equilíbrio ⭑ mais você</span>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- sobre-->
     <section class="sobre" id="sobre">
@@ -205,7 +146,7 @@
             </p>                      
             
         <div class="container-sobre">
-            <div class="sobre-image-wrapper">      <!-- loading="lazy" -imagem só carrega quando estiver prestes a aparecer na tela-->
+            <div class="sobre-image-wrapper">
                 <img 
                     src="assets/presenca247.jpg" 
                     loading="lazy" 
@@ -228,32 +169,32 @@
             
             <div class="sobre-grid">
                 <div class="sobre-card">
-                    <i class="fas fa-graduation-cap"></i>
+                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
                     <h3>Formação</h3>
                     <p>Me formei em 2020 e sou especializada na área clínica.</p>
                 </div>
                 <div class="sobre-card">
-                    <i class="fa-solid fa-brain"></i>
+                    <i class="fa-solid fa-brain" aria-hidden="true"></i>
                     <h3>Mais técnica, mesmo acolhimento</h3>
                     <p>Atualmente cursando pós-graduação em Neuropsicologia, com foco em atualização científica e cuidado humanizado.</p>
                 </div>
                 <div class="sobre-card">
-                    <i class="fas fa-hospital-user"></i>
+                    <i class="fas fa-hospital-user" aria-hidden="true"></i>
                     <h3>Atuação Clínica</h3>
                     <p>Atuo como psicóloga clínica na clínica particular e na saúde pública de Ivinhema-MS.</p>
                 </div>
                 <div class="sobre-card">
-                    <i class="fas fa-hands-helping"></i>
+                    <i class="fas fa-hands-helping" aria-hidden="true"></i>
                     <h3>Projeto Social</h3>
                     <p>Faço parte do projeto RUAH-Pro Vida.</p>
                 </div>
                 <div class="sobre-card">
-                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart" aria-hidden="true"></i>
                     <h3>Acolhimento</h3>
                     <p>Adoro ouvir e acolher as pessoas com empatia e respeito.</p>
                 </div>
                 <div class="sobre-card">
-                    <i class="fas fa-quote-left"></i>
+                    <i class="fas fa-quote-left" aria-hidden="true"></i>
                     <h3>Filosofia</h3>
                     <p>"Conheça todas as teorias, domine todas as técnicas, mas ao tocar uma alma humana, seja apenas outra alma humana." — Carl Jung</p>
                 </div>            
@@ -269,32 +210,32 @@
 
             <div class="servicos-grid">
                 <div class="servico-item">
-                    <div class="servico-icon"><i class="fas fa-compass"></i></div>
+                    <div class="servico-icon"><i class="fas fa-compass" aria-hidden="true"></i></div>
                     <h3>Ajuda a encontrar caminhos</h3>
                     <p>Ajuda você a encontrar caminhos diante das incertezas da vida.</p>
                 </div>
                 <div class="servico-item">
-                    <div class="servico-icon"><i class="fas fa-hands"></i></div>
+                    <div class="servico-icon"><i class="fas fa-hands" aria-hidden="true"></i></div>
                     <h3>Acolhe</h3>
                     <p>Recebe você com escuta empática, sem julgamentos.</p>
                 </div>
                 <div class="servico-item">
-                    <div class="servico-icon"><i class="fas fa-ear-listen"></i></div>
+                    <div class="servico-icon"><i class="fas fa-ear-listen" aria-hidden="true"></i></div>
                     <h3>Escuta você</h3>
                     <p>Um espaço seguro onde a sua voz é prioridade.</p>
                 </div>
                 <div class="servico-item"> 
-                    <div class="servico-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="servico-icon"><i class="fas fa-lightbulb" aria-hidden="true"></i></div>
                     <h3>Gera reflexões</h3>
                     <p>Estimula o autoconhecimento e novas perspectivas.</p>
                 </div>
                 <div class="servico-item">
-                    <div class="servico-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="servico-icon"><i class="fas fa-handshake" aria-hidden="true"></i></div>
                     <h3>Te respeita</h3>
                     <p>Cada história é única e merece respeito integral.</p>
                 </div>
                 <div class="servico-item">
-                    <div class="servico-icon"><i class="fas fa-seedling"></i></div>
+                    <div class="servico-icon"><i class="fas fa-seedling" aria-hidden="true"></i></div>
                     <h3>Te apoia</h3>
                     <p>Caminha junto com você em direção ao bem-estar.</p>
                 </div>
@@ -311,19 +252,19 @@
 
             <div class="publico-grid">
                 <div class="publico-card">
-                    <i class="fas fa-child"></i>
+                    <i class="fas fa-child" aria-hidden="true"></i>
                     <h3>Crianças</h3>
                 </div>
                 <div class="publico-card">
-                    <i class="fas fa-user-graduate"></i>
+                    <i class="fas fa-user-graduate" aria-hidden="true"></i>
                     <h3>Adolescentes</h3>
                 </div>
                 <div class="publico-card">
-                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user" aria-hidden="true"></i>
                     <h3>Adultos</h3>
                 </div>
                 <div class="publico-card highlight">
-                    <i class="fas fa-laptop-house"></i>
+                    <i class="fas fa-laptop-house" aria-hidden="true"></i>
                     <h3>Presencial e Online</h3>
                 </div>
             </div>
@@ -335,18 +276,17 @@
         <div class="container">
             <span class="section-tag">ENTRE EM CONTATO</span>
             <h2 class="section-title">Vamos Conversar?</h2>
-            <p class="section-subtitle"></p>
             <div class="contato-wrapper">
                 <div class="contato-info">
                     <div class="info-item">
-                        <i class="fab fa-whatsapp"></i>
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
                         <div>
                             <strong>WhatsApp</strong>
                             <a href="https://wa.me/5567999682209" target="_blank" rel="noopener noreferrer">(67) 99968-2209</a>
                         </div>
                     </div>
                     <div class="info-item">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                         <div>
                             <strong>E-mail</strong>
                             <a href="mailto:flavia_custodia@hotmail.com">flavia_custodia@hotmail.com</a>
@@ -354,14 +294,14 @@
                     </div>
                     
                     <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         <div>
                             <strong>Endereço</strong>
                             <span>Av. João Euzébio Sobrinho, Nº 351<br>Ivinhema - MS</span>
                         </div>
                     </div>
                     <div class="info-item">
-                        <i class="fas fa-clock"></i>
+                        <i class="fas fa-clock" aria-hidden="true"></i>
                         <div>
                             <strong>Atendimento</strong>
                             <span>Segunda a Sexta — Agendamento Prévio</span>
@@ -413,7 +353,7 @@
                     </div>
 
                     <button type="submit" class="btn btn-primary btn-full">
-                        <i class="fas fa-paper-plane"></i> 
+                        <i class="fas fa-paper-plane" aria-hidden="true"></i> 
                         Enviar solicitação
                     </button>
 
@@ -427,26 +367,25 @@
             </div>
         </div>
     </section>
-</main>
-<!--mapaaa-->
-<section class="mapa">
-    <div class="container">
-        <span class="section-tag">LOCALIZAÇÃO</span>
-        <h2 class="section-title">Onde Me Encontrar</h2>
-        <div class="mapa-wrapper">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29530.54869222991!2d-53.8453674!3d-22.3037879!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948ebb006ec71f0f%3A0x5dc5f44d82bafe86!2zUHNpY8OzbG9nYSBGbMOhdmlhIEN1c3TDs2Rpbw!5e0!3m2!1spt-BR!2sbr!4v1780435019799!5m2!1spt-BR!2sbr" 
-              title="Mapa de localização da clínica da psicóloga Flávia Custódio em Ivinhema"
-              width="100%"
-              height="350"
-              loading="lazy" 
-              allowfullscreen="" 
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- MAPA -->
+    <section class="mapa">
+        <div class="container">
+            <span class="section-tag">LOCALIZAÇÃO</span>
+            <h2 class="section-title">Onde Me Encontrar</h2>
+            <div class="mapa-wrapper">
+                <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29530.54869222991!2d-53.8453674!3d-22.3037879!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x948ebb006ec71f0f%3A0x5dc5f44d82bafe86!2zUHNpY8OzbG9nYSBGbMOhdmlhIEN1c3TDs2Rpbw!5e0!3m2!1spt-BR!2sbr!4v1780435019799!5m2!1spt-BR!2sbr" 
+                title="Mapa de localização da clínica da psicóloga Flávia Custódio em Ivinhema"
+                width="100%"
+                height="350"
+                loading="lazy" 
+                allowfullscreen="" 
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
-    </div>
-</section>
-
-<!--footer -->
+    </section>
+</main>
+<!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -458,13 +397,13 @@
 
                 <div class="footer-social">
                     <a href="https://instagram.com/psicologa_flavia_custodio" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-instagram" aria-hidden="true"></i>
                     </a>
                     <a href="https://wa.me/5567999682209" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
                     </a>
                     <a href="mailto:flavia_custodia@hotmail.com" aria-label="E-mail">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -473,9 +412,10 @@
                 <p><small>Atendimento presencial e online · Ivinhema/MS</small></p>
                 <a href="./privacidade.html">Política de Privacidade │ </a>
                 
-                <a href="https://irisbispo.netlify.app/"
+                <a href="https://www.irisbispo.com/" 
                     class="creditos"
                     target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Portfólio da Desenvolvedora do site"
                     data-tooltip="Conheça o portfólio de quem desenvolveu este site">
                     //IB
@@ -486,10 +426,9 @@
 
     <!-- botão flutuante de WhatsApp -->
     <a href="https://wa.me/5567999682209" target="_blank" rel="noopener noreferrer" class="float-whatsapp" aria-label="Fale no WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
-    <!-- javascript -->
     <script src="script.js"></script>
 </body>
 </html>
