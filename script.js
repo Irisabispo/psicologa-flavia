@@ -215,3 +215,48 @@ if (telefoneInput) {
     e.target.value = v;
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const revealElements = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // anima só uma vez
+      }
+    });
+  }, {
+    threshold: 0.15, // dispara quando 15% do elemento aparece
+    rootMargin: '0px 0px -50px 0px' // antecipa um pouco antes de chegar no fim da tela
+  });
+
+  revealElements.forEach((el) => observer.observe(el));
+});
+
+// ========================================
+// FAQ - ACCORDION
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', function() {
+            const isActive = item.classList.contains('active');
+
+            // Fecha todos os itens
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            });
+
+            // Se não estava ativo, abre
+            if (!isActive) {
+                item.classList.add('active');
+                item.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+});
