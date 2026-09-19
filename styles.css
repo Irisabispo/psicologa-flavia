@@ -335,6 +335,7 @@ a { text-decoration: none; color: inherit; }
     max-width: 360px;
     margin: 0 auto;
     position: relative;
+    order: 2;
 }
 
 .acolhimento-image img {
@@ -365,6 +366,7 @@ a { text-decoration: none; color: inherit; }
     -webkit-mask-size: 100% 100%;
     filter: saturate(0.96);
     transition: transform 0.6s ease, filter 0.6s ease;
+    
 }
 .acolhimento-image:hover img { transform: scale(1.025); filter: saturate(1); }
 
@@ -372,6 +374,7 @@ a { text-decoration: none; color: inherit; }
     max-width: 620px;
     margin: 0 auto;
     color: #8b6f63;
+    order: 1;
 }
 .acolhimento-content .section-tag { display: inline-block; margin-bottom: 16px; }
 
@@ -810,10 +813,9 @@ a { text-decoration: none; color: inherit; }
     border-top: 1px solid rgba(255,255,255,0.2);
     padding-top: 20px;
     text-align: center;
-    font-size: 0.85rem;
+    font-size: clamp(0.75rem, 0.72rem + 0.15vw, 0.85rem);
     opacity: 0.85;
 }
-
 .creditos {
     position: relative;
     color: inherit;
@@ -874,13 +876,12 @@ a { text-decoration: none; color: inherit; }
 .float-whatsapp:hover { transform: scale(1.1); animation-play-state: paused; }
 
 /* BREAKPOINTS */
-
 /* ---- sm: 576px+ ---- */
 @media (min-width: 576px) {
 
     .hero {
         background-size: min(75%, 420px) auto;
-        padding-bottom: 480px;
+        
     }
     .hero-buttons {
         flex-direction: row;
@@ -918,7 +919,6 @@ a { text-decoration: none; color: inherit; }
 
     .hero {
         background-size: min(65%, 480px) auto;
-        padding-bottom: 540px;
     }
 
     .hero-title { font-size: clamp(3rem, 7vw, 4.5rem); }
@@ -944,7 +944,7 @@ a { text-decoration: none; color: inherit; }
     .publico-card:hover { transform: scale(1.06) rotate(0deg); }
 }
 
-/* ---- lg: 992px+ (LAYOUT DA INSPIRAÇÃO) ---- */
+/* ---- lg: 992px+ ---- */
 @media (min-width: 992px) {
     .hero-image-card {
         display: none;
@@ -996,8 +996,8 @@ a { text-decoration: none; color: inherit; }
         grid-template-columns: minmax(360px, 0.85fr) minmax(420px, 1.15fr);
         gap: clamp(60px, 8vw, 120px);
     }
-    .acolhimento-image { max-width: 460px; justify-self: center; }
-    .acolhimento-content { margin: 0; max-width: 620px; }
+    .acolhimento-image { max-width: 460px; justify-self: center; order: 1; }
+    .acolhimento-content { margin: 0; max-width: 620px; order: 2; }
     .acolhimento-title { font-size: clamp(2rem, 3vw, 3.2rem); }
     .acolhimento-text p { line-height: 1.8; }
     .acolhimento-info { margin-top: 32px; margin-bottom: 32px; }
@@ -1021,6 +1021,8 @@ a { text-decoration: none; color: inherit; }
     .sobre-timeline-content p { font-size: 1rem; }
     .sobre-text { margin-top: 110px; }
     .sobre-text-title { font-size: 2.4rem; }
+
+    
 }
 
 /* ---- xl: 1200px+ ---- */
