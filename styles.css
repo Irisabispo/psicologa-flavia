@@ -324,8 +324,8 @@ a { text-decoration: none; color: inherit; }
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 48px;
 }
@@ -335,7 +335,7 @@ a { text-decoration: none; color: inherit; }
     max-width: 360px;
     margin: 0 auto;
     position: relative;
-    order: 2;
+    order: 1;
 }
 
 .acolhimento-image img {
@@ -374,7 +374,6 @@ a { text-decoration: none; color: inherit; }
     max-width: 620px;
     margin: 0 auto;
     color: #8b6f63;
-    order: 1;
 }
 .acolhimento-content .section-tag { display: inline-block; margin-bottom: 16px; }
 
@@ -415,7 +414,7 @@ a { text-decoration: none; color: inherit; }
     margin-right: 8px;
     color: #a87968;
 }
-.acolhimento-content .btn { margin-top: 2px; }
+.acolhimento-content .btn { margin-top: 2px; order: 1; }
 
 /* SERVIÇOS */
 .servicos { background: #f4d9cf; text-align: center; padding: 80px 0; }
@@ -744,6 +743,67 @@ a { text-decoration: none; color: inherit; }
 .info-item a,
 .info-item span { color: #8b6f63; font-size: 0.9rem; word-break: break-word; }
 .info-item a:hover { color: #8b5e4c; }
+/* Whatsapp e Instagram */ 
+.contato-social-section {
+    background: #f4d9cf;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.contato-social-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contato-social-section .section-tag {
+    margin-top: 0;
+}
+
+.contato-social-texto {
+    max-width: 500px;
+    margin: 0 auto 28px;
+    color: #8b6f63;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.contato-social {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.contato-social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-width: 150px;
+    padding: 14px 24px;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contato-social-btn i {
+    font-size: 1.15rem;
+}
+
+.contato-social-btn--instagram {
+    background: #E4405F;
+}
+
+.contato-social-btn--whatsapp {
+    background: #25D366;
+}
+
+.contato-social-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(0.92);
+}
 
 /* POLÍTICA DE PRIVACIDADE */
 .container-privacidade {
@@ -938,6 +998,13 @@ a { text-decoration: none; color: inherit; }
     .sobre-timeline { gap: 42px; }
 
     .contato-info { grid-template-columns: 1fr 1fr; }
+    .contato-social-section {
+        padding: 90px 0;
+    }
+
+    .contato-social {
+        gap: 18px;
+    }
 
     .publico-card:nth-child(odd) { --rot: -2deg; }
     .publico-card:nth-child(even) { --rot: 2deg; margin-top: 24px; }
@@ -993,11 +1060,16 @@ a { text-decoration: none; color: inherit; }
 
     .acolhimento { padding: 120px 48px; }
     .acolhimento-container {
-        grid-template-columns: minmax(360px, 0.85fr) minmax(420px, 1.15fr);
-        gap: clamp(60px, 8vw, 120px);
+        display: grid;
+    grid-template-columns: minmax(360px, 0.85fr) minmax(420px, 1.15fr);
+    align-items: center;
+    gap: clamp(60px, 8vw, 120px);
     }
-    .acolhimento-image { max-width: 460px; justify-self: center; order: 1; }
-    .acolhimento-content { margin: 0; max-width: 620px; order: 2; }
+    .acolhimento-image { grid-column: 1;
+    grid-row: 1;
+    max-width: 460px;
+    justify-self: center; }
+    .acolhimento-content { margin: 0; max-width: 620px; }
     .acolhimento-title { font-size: clamp(2rem, 3vw, 3.2rem); }
     .acolhimento-text p { line-height: 1.8; }
     .acolhimento-info { margin-top: 32px; margin-bottom: 32px; }
@@ -1022,7 +1094,21 @@ a { text-decoration: none; color: inherit; }
     .sobre-text { margin-top: 110px; }
     .sobre-text-title { font-size: 2.4rem; }
 
-    
+    .footer-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    }
+
+    .footer-bottom p small {
+    font-size: 0.8rem;
+}
+
+    .footer-bottom .politica-privacidade {
+        margin-left: 0;
+    }
 }
 
 /* ---- xl: 1200px+ ---- */
