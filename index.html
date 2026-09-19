@@ -15,45 +15,6 @@
 <!-- ícones de font awesome -->
     <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
 
-<!--CSS crítico (só hero - inline) e esse "crítico" é: hero aparece imediatamente porque o CSS crítico já está no HTML-->
-        <style>
-            body {
-            margin: 0;
-            font-family: sans-serif;
-        }
-
-            .hero {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                align-items: center;
-                padding: 120px 24px;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
-
-            .hero-title {
-                font-size: 4rem;
-                line-height: 1.1;
-            }
-
-            .hero-buttons {
-                display: flex;
-                gap: 16px;
-        }
-
-            .hero-image {
-                display: flex;
-                justify-content: center;
-            }
-
-            .hero-photo {
-                width: 100%;
-                max-width: 420px;
-                height: 520px;
-                object-fit: cover;
-            }
-        </style>
-
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -70,13 +31,10 @@
                     <span class="logo-sub">Psicóloga Clínica</span>
                 </div>
             </a>
-            
-
             <!-- aria-expanded="false" para indicar que o menu está fechado, importante para acessibilidade em menus móveis -->
             <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
                 <span></span><span></span><span></span>
             </button>
-
             <ul class="nav-menu" id="navMenu"> 
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -86,115 +44,94 @@
             </ul>
         </div>
     </nav>
-<main> <!-- conteúdo principal da página, para melhorar semântica, acessibilidade e SEO -->
+<main>
+    <!-- HERO -->
     <section class="hero" id="inicio">
     <div class="hero-content">
         <span class="hero-tag">CRP 14/08720-9</span>
         <h1 class="hero-title">
-            Flávia Custódio <em>Psicóloga Clínica em Ivinhema</em>
+            Flávia Custódio
+            <em>Psicóloga Clínica em Ivinhema</em>
         </h1>
         <h2 class="hero-subtitle">
             Um espaço seguro para escutar, acolher e ressignificar a sua história
         </h2>
+
+        <div class="hero-image-card">
+    <img
+        src="assets/confianca.webp"
+        alt="Psicóloga Flávia Custódio em um ambiente acolhedor"
+        width="420"
+        height="520"
+        fetchpriority="high"
+        decoding="async"
+    >
+</div>
         <div class="hero-buttons">
             <button class="btn btn-primary" id="btnAgendar" type="button">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24"
+                    fill="currentColor" aria-hidden="true">
                     <path d="M7 2v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-2V2h-2v2H9V2H7zm12 18H5V9h14v11z"/>
                 </svg>
                 Agendar Sessão
             </button>
-
             <button class="btn btn-secondary" id="btnSaberMais" type="button">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24"
+                    fill="currentColor" aria-hidden="true">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm1-6h-2v-7h2v7z"/>
                 </svg>
                 Saber Mais
             </button>
         </div>
     </div>
-    <div class="hero-image">
-        <img
-            src="assets/contentamento295.jpg"
-            alt="Psicóloga Flávia Custódio em ambiente acolhedor"
-            class="hero-photo"
-            width="420"
-            height="520"
-            fetchpriority="high"
-            decoding="async"
-            loading="eager"
-        >
-
-        <div class="hero-circle">
-            <div class="hero-logo">
-                <p class="brand-s">Quando a escuta acolhe,</p>
-                <span class="brand-m">a mente respira</span>
+</section>
+<!-- ACOLHIMENTO -->
+<section class="acolhimento" id="acolhimento">
+    <div class="acolhimento-container">
+        <div class="acolhimento-image reveal reveal--left">
+            <img
+                src="assets/presenca.jpg"
+                alt="Psicóloga Flávia Custódio em ambiente acolhedor"
+                width="309"
+                height="520"
+                loading="lazy"
+                decoding="async"
+            >
+        </div>
+        <div class="acolhimento-content reveal reveal--right">
+            <span class="section-tag">UM ESPAÇO PARA VOCÊ</span>
+            <h2 class="acolhimento-title">
+                Um espaço para você se sentir à vontade
+            </h2>
+            <div class="acolhimento-text">
+                <p>
+                    A terapia pode ser um momento de pausa, de cuidado e de escuta.
+                    Um espaço para falar sobre o que você está vivendo, organizar os
+                    pensamentos e compreender melhor aquilo que sente.
+                </p>
+                <p>
+                    No atendimento on-line, você pode estar no conforto da sua casa
+                    ou em outro lugar onde se sinta bem para conversar. Sem precisar
+                    sair, sem pressa e respeitando o seu próprio tempo.
+                </p>
+                <p>
+                    Quero que você se sinta à vontade para falar, ser ouvido(a) e
+                    construir esse processo com tranquilidade. Estou aqui para
+                    caminhar com você.
+                </p>
             </div>
+            <div class="acolhimento-info" aria-label="Características do atendimento">
+                <span>Atendimento reservado</span>
+                <span>No seu ritmo</span>
+                <span>Escuta acolhedora</span>
+            </div>
+            <button class="btn btn-primary" id="btnAcolhimento" type="button">
+                Quero conversar
+            </button>
         </div>
     </div>
 </section>
-
-    <!-- sobre-->
-    <section class="sobre" id="sobre">
-        <div class="container">
-            <span class="section-tag">QUEM SOU EU</span>
-            <h2 class="section-title">Flávia Juliana Custódio da Paz</h2>
-            <p class="section-subtitle">
-            Apaixonada em transformar vidas com psicologia,
-                promovendo saúde mental e bem-estar. <br>˗ˏˋ 𝚿 ˎˊ˗
-            </p>                      
-            
-        <div class="container-sobre">
-            <div class="sobre-image-wrapper reveal--left">
-                <img 
-                    src="assets/presenca247.jpg" 
-                    loading="lazy" 
-                    decoding="async"
-                    width="600"
-                    height="900"
-                    alt="Psicóloga Flávia Juliana Custódio da Paz sentada em seu consultório, com a mão no queixo e um sorriso discreto" 
-                    class="sobre-image"
-                    >
-            </div>
-                <div class="sobre-text reveal reveal--right">
-                    <span class="sobre-text-title">Um pouco além da psicologia</span>
-                    <p>Sou apaixonada por ouvir histórias
-                    e acompanhar processos  de transformação.
-                    Fora do consultório, gosto de ler, ouvir música, assistir filmes e conhecer novos lugares. 
-                    Acredito que cada experiência amplia nosso olhar sobre as pessoas e fortalece a empatia que 
-                    levo para cada atendimento.</p>
-                </div>
-        </div>
-            
-            <div class="sobre-grid">
-                <div class="sobre-card reveal reveal--ip reveal--stagger">
-                    <i class="fas fa-graduation-cap" aria-hidden="true"></i>
-                    <h3>Formação</h3>
-                    <p>Me formei em 2020 e sou especializada na área clínica.</p>
-                </div>
-                <div class="sobre-card reveal reveal--up reveal--stagger">
-                    <i class="fa-solid fa-brain" aria-hidden="true"></i>
-                    <h3>Mais técnica, mesmo acolhimento</h3>
-                    <p>Atualmente cursando pós-graduação em Neuropsicologia, com foco em atualização científica e cuidado humanizado.</p>
-                </div>
-                <div class="sobre-card reveal reveal--up reveal--stagger">
-                    <i class="fas fa-hospital-user" aria-hidden="true"></i>
-                    <h3>Atuação Clínica</h3>
-                    <p>Atuo como psicóloga clínica na clínica particular e na saúde pública de Ivinhema-MS.</p>
-                </div>
-                <div class="sobre-card reveal reveal--up reveal--stagger">
-                    <i class="fas fa-hands-helping" aria-hidden="true"></i>
-                    <h3>Projeto Social</h3>
-                    <p>Faço parte do projeto RUAH-Pro Vida.</p>
-                </div>
-                <div class="sobre-card reveal reveal--up reveal--stagger">
-                    <i class="fas fa-heart" aria-hidden="true"></i>
-                    <h3>Acolhimento</h3>
-                    <p>Adoro ouvir e acolher as pessoas com empatia e respeito.</p>
-                </div>            
-            </div>
-        </div>
-    </section>
-
+<!--  SERVIÇOS -->
     <section class="servicos" id="servicos">
     <div class="container">
         <span class="section-tag">COMO EU POSSO TE AJUDAR</span>
@@ -245,6 +182,192 @@
             </div>
         </div>
     </div>
+</section>
+    <!-- SOBRE -->
+<section class="sobre" id="sobre">
+
+    <div class="container">
+
+        <span class="section-tag">QUEM SOU EU</span>
+
+        <h2 class="section-title">
+            Flávia Juliana Custódio da Paz
+        </h2>
+
+        <p class="section-subtitle">
+            Apaixonada em transformar vidas com psicologia,
+            promovendo saúde mental e bem-estar.
+            <br>
+            ˗ˏˋ 𝚿 ˎˊ˗
+        </p>
+        <div class="sobre-image-wrapper reveal reveal--up">
+
+            <img
+                src="assets/contentamento.jpg"
+                alt="Psicóloga Flávia Juliana Custódio da Paz em seu consultório"
+                class="sobre-image"
+                width="1200"
+                height="800"
+                loading="lazy"
+                decoding="async"
+            >
+
+        </div>
+
+
+        <!-- TRAJETÓRIA -->
+        <div class="sobre-trajetoria">
+
+            <div class="sobre-trajetoria-intro reveal reveal--left">
+
+                <span class="sobre-mini-tag">
+                    MINHA TRAJETÓRIA
+                </span>
+
+                <h3>
+                    Um caminho construído
+                    com estudo, experiência
+                    e cuidado.
+                </h3>
+
+            </div>
+
+
+            <div class="sobre-timeline">
+
+                <article class="sobre-timeline-item reveal reveal--right">
+
+                    <span class="sobre-timeline-marker">
+                        01
+                    </span>
+
+                    <div class="sobre-timeline-content">
+
+                        <span class="sobre-timeline-label">
+                            2020
+                        </span>
+
+                        <h4>
+                            Formação em Psicologia
+                        </h4>
+
+                        <p>
+                            Me formei em Psicologia em 2020,
+                            iniciando minha trajetória na área clínica.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="sobre-timeline-item reveal reveal--right">
+
+                    <span class="sobre-timeline-marker">
+                        02
+                    </span>
+
+                    <div class="sobre-timeline-content">
+
+                        <span class="sobre-timeline-label">
+                            ATUALMENTE
+                        </span>
+
+                        <h4>
+                            Mais técnica, mesmo acolhimento
+                        </h4>
+
+                        <p>
+                            Atualmente curso pós-graduação em
+                            Neuropsicologia, buscando ampliar
+                            continuamente meus conhecimentos.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="sobre-timeline-item reveal reveal--right">
+
+                    <span class="sobre-timeline-marker">
+                        03
+                    </span>
+
+                    <div class="sobre-timeline-content">
+
+                        <span class="sobre-timeline-label">
+                            ATUAÇÃO
+                        </span>
+
+                        <h4>
+                            Atuação Clínica
+                        </h4>
+
+                        <p>
+                            Atuo como psicóloga clínica na clínica
+                            particular e na saúde pública de
+                            Ivinhema-MS.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="sobre-timeline-item reveal reveal--right">
+
+                    <span class="sobre-timeline-marker">
+                        04
+                    </span>
+
+                    <div class="sobre-timeline-content">
+
+                        <span class="sobre-timeline-label">
+                            PROJETO SOCIAL
+                        </span>
+
+                        <h4>
+                            RUAH-Pro Vida
+                        </h4>
+
+                        <p>
+                            Também faço parte do projeto
+                            RUAH-Pro Vida, levando minha atuação
+                            para além do consultório.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- ALÉM DA PSICOLOGIA -->
+        <div class="sobre-text reveal reveal--up">
+
+            <span class="sobre-text-title">
+                Um pouco além da psicologia
+            </span>
+
+            <p>
+                Sou apaixonada por ouvir histórias e acompanhar
+                processos de transformação. Fora do consultório,
+                gosto de ler, ouvir música, assistir filmes e
+                conhecer novos lugares.
+
+                Acredito que cada experiência amplia nosso olhar
+                sobre as pessoas e fortalece a empatia que levo
+                para cada atendimento.
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
 
     <!--FILOSOFIA-->
@@ -323,61 +446,7 @@
                     </div>
                 </div>
 
-                <!-- formulário para agendamento -->
-                <form class="contato-form" id="formAgendamento">
-                    <h3>Solicite seu Agendamento</h3>
 
-                    <div class="form-group">
-                        <label for="nome">Nome completo</label>
-                        <input type="text" id="nome" name="nome" autocomplete="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" autocomplete="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="telefone">Telefone / WhatsApp</label>
-                        <input type="tel" id="telefone" name="telefone" autocomplete="tel" required>
-                    </div>
-                
-                    <div class="form-group">
-                        <label for="modalidade">Modalidade</label>
-                        <select id="modalidade" name="modalidade" required>
-                            <option value="">Selecione...</option>
-                            <option value="presencial">Presencial</option>
-                            <option value="online">Online</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem (opcional)</label>
-                        <textarea id="mensagem" name="mensagem" rows="4" maxlength="500"></textarea>
-                    </div>
-
-                        <!-- HONEYPOT -->
-                    <div class="honeypot-field" aria-hidden="true">
-                        <label for="website">Website</label>
-                        <input
-                            type="text"
-                            id="website"
-                            name="website"
-                            autocomplete="off"
-                            tabindex="-1">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary btn-full">
-                        <i class="fas fa-paper-plane" aria-hidden="true"></i> 
-                        Enviar solicitação
-                    </button>
-
-                    <p class="form-privacy">
-                        Ao enviar, você concorda com nossa 
-                        <a href="./privacidade.html" target="_blank" rel="noopener noreferrer">Política de Privacidade, em conformidade com a LGPD</a>.
-                    </p>
-                    <!-- feedback -->
-                    <div id="formFeedback" class="form-feedback" role="status" aria-live="polite"></div>
-                </form>
             </div>
         </div>
     </section>
@@ -430,9 +499,9 @@
                     class="creditos"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Portfólio da Desenvolvedora do site"
-                    data-tooltip="Conheça o portfólio de quem desenvolveu este site">
-                    //IB
+                    aria-label="Desenvolvedora do site"
+                    data-tooltip="Conheça quem desenvolveu este site">
+                    IB
                 </a>
             </div>
         </div>
