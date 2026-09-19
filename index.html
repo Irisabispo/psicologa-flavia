@@ -6,6 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Psicóloga Flávia Juliana Custódio da Paz. Atendimento psicológico presencial em Ivinhema/MS e online. Psicoterapia para crianças, adolescentes e adultos.">
+
+    <!-- OPEN GRAPH -->
+<meta property="og:title" content="Flávia Custódio | Psicóloga Clínica">
+<meta property="og:description" content="Atendimento psicológico presencial em Ivinhema/MS e online. Um espaço de acolhimento, escuta e cuidado.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://psicologa-flavia.netlify.app/">
+<meta property="og:image" content="https://psicologa-flavia.netlify.app/assets/confianca.webp">
+<meta property="og:image:alt" content="Psicóloga Flávia Custódio">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Flávia Custódio — Psicóloga Clínica">
 <!--favicon-->
     <link rel="icon" type="image/png" href="./assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
@@ -37,8 +47,8 @@
             </button>
             <ul class="nav-menu" id="navMenu"> 
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#publico">Público</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
@@ -68,22 +78,29 @@
     >
 </div>
         <div class="hero-buttons">
-            <button class="btn btn-primary" id="btnAgendar" type="button">
-                <svg width="18" height="18" viewBox="0 0 24 24"
-                    fill="currentColor" aria-hidden="true">
-                    <path d="M7 2v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2h-2V2h-2v2H9V2H7zm12 18H5V9h14v11z"/>
-                </svg>
-                Agendar Sessão
-            </button>
-            
-            <button class="btn btn-secondary" id="btnSaberMais" type="button">
-                <svg width="18" height="18" viewBox="0 0 24 24"
-                    fill="currentColor" aria-hidden="true">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm1-6h-2v-7h2v7z"/>
-                </svg>
-                Saber Mais
-            </button>
-        </div>
+
+    <a class="btn btn-primary" href="#contato-social">
+    <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        aria-hidden="true"
+        focusable="false"
+    >
+        <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/>
+    </svg>
+    Entrar em contato
+</a>
+    <a class="btn btn-secondary" href="#servicos">
+        <svg width="18" height="18" viewBox="0 0 24 24"
+            fill="currentColor" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0-3 1.5 1.5 0 0 1 0 3zm1-6h-2v-7h2v7z"/>
+        </svg>
+        Saber mais
+    </a>
+
+</div>
     </div>
 </section>
 <!-- ACOLHIMENTO -->
@@ -450,7 +467,7 @@
         </div>
     </section>
     <!-- CONTATO -->
-    <section class="contato-social-section" aria-labelledby="contato-social-title">
+    <section class="contato-social-section" id="contato-social" aria-labelledby="contato-social-title">
     <div class="container contato-social-container">
 
         <span class="section-tag">Vamos conversar</span>
