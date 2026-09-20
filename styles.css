@@ -418,8 +418,13 @@ a { text-decoration: none; color: inherit; }
 
 /* SERVIÇOS */
 .servicos { background: #f4d9cf; text-align: center; padding: 80px 0; }
-.servicos-lista { display: grid; max-width: 720px; margin: 40px auto 0; }
-
+.servicos-lista { 
+    display: grid; 
+    max-width: 720px; 
+    margin: 40px auto 0; 
+    padding: 0;
+    list-style: none;
+}
 .servico-linha {
     display: flex;
     flex-direction: column;
@@ -430,7 +435,6 @@ a { text-decoration: none; color: inherit; }
     border-bottom: 1px solid rgba(139, 94, 76, 0.15);
 }
 .servico-linha:last-child { border-bottom: none; }
-
 .servico-linha-icon {
     flex-shrink: 0;
     width: 56px;
@@ -442,7 +446,6 @@ a { text-decoration: none; color: inherit; }
     justify-content: center;
 }
 .servico-linha-icon i { font-size: 1.3rem; color: #8b5e4c; }
-
 .servico-linha-texto h3 {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.25rem;
@@ -454,7 +457,6 @@ a { text-decoration: none; color: inherit; }
     font-size: 0.92rem;
     line-height: 1.5;
 }
-
 /* SOBRE */
 .sobre {
     background: #fff;
@@ -603,30 +605,6 @@ a { text-decoration: none; color: inherit; }
 .reveal--stagger:nth-child(4) { transition-delay: 0.45s; }
 .reveal--stagger:nth-child(5) { transition-delay: 0.6s; }
 
-/* FILOSOFIA */
-.filosofia { background: #8b5e4c; text-align: center; padding: 80px 0; }
-.filosofia-icon { font-size: 2.2rem; color: #fdf6f1; opacity: 0.85; margin-bottom: 20px; }
-
-.filosofia-quote {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: 1.4rem;
-    font-weight: 400;
-    color: #fdf6f1;
-    max-width: 700px;
-    margin: 0 auto 24px;
-    line-height: 1.6;
-}
-.filosofia-autor {
-    display: block;
-    font-family: 'Poppins', sans-serif;
-    font-style: normal;
-    font-size: 0.85rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: #f4d9cf;
-}
-
 /* PÚBLICO */
 .publico { background: white; text-align: center; padding: 80px 0; }
 
@@ -636,6 +614,8 @@ a { text-decoration: none; color: inherit; }
     justify-content: center;
     gap: 28px;
     margin-top: 50px;
+    padding: 0;
+    list-style: none;
 }
 
 .publico-card {
@@ -696,7 +676,32 @@ a { text-decoration: none; color: inherit; }
 .publico-card.highlight i,
 .publico-card.highlight h3 { color: white; }
 .publico-card.highlight:hover { background: #794733; }
+/* FILOSOFIA */
+.filosofia { background: #8b5e4c; text-align: center; padding: 80px 0; }
+.filosofia-icon { font-size: 2.2rem; color: #fdf6f1; opacity: 0.85; margin-bottom: 20px; }
 
+.filosofia-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #fdf6f1;
+    max-width: 700px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+}
+.filosofia-autor {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #f4d9cf;
+}
+.filosofia figure {
+    margin: 0;
+}
 /* CONTATO */
 .contato { padding: 80px 0; background: #fdf6f1; text-align: center; }
 
