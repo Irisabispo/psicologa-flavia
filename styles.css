@@ -1076,7 +1076,7 @@ a { text-decoration: none; color: inherit; }
                 rgba(253, 246, 241, 0.55) 60%,
                 rgba(253, 246, 241, 0.15) 100%
             ),
-            url('assets/confianca2.webp');
+            url('assets/confianca.webp');
         background-repeat: no-repeat, no-repeat;
         background-position: center, 25% center;
         background-size: 100% 100%, auto 100%;
@@ -1146,7 +1146,7 @@ a { text-decoration: none; color: inherit; }
                 rgba(253, 246, 241, 0.55) 60%,
                 rgba(253, 246, 241, 0.15) 100%
             ),
-            url('assets/confianca.webp');
+            url('assets/flavia.webp');
 
         background-repeat: no-repeat, no-repeat;
         /* o valor de center é do gradiente, já os % é a imagem */
