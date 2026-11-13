@@ -517,7 +517,6 @@ a { text-decoration: none; color: inherit; }
     padding: 80px 0;
     overflow: hidden;
 }
-
 .sobre-image-wrapper {
     width: 100%;
     max-width: 900px;
@@ -644,7 +643,229 @@ a { text-decoration: none; color: inherit; }
     font-size: 1rem;
     line-height: 1.8;
 }
+/* AVALIAÇÃO NEUROPSICOLÓGICA */
+.avaliacao {
+    background: #fdf6f1;
+    padding: 80px 0;
+    overflow: hidden;
+}
+/* INTRODUÇÃO */
+.avaliacao-intro {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+.avaliacao-intro .section-tag {
+    margin-top: 0;
+}
+.avaliacao-intro .section-title {
+    margin-bottom: 12px;
+}
+.avaliacao-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    font-style: italic;
+    color: #a87968;
+    margin-bottom: 24px;
+}
+.avaliacao-descricao {
+    max-width: 680px;
+    margin: 0 auto;
+    color: #8b6f63;
+    font-size: 0.95rem;
+    line-height: 1.85;
+}
+/* FUNÇÕES COGNITIVAS */
+.avaliacao-funcoes {
+    max-width: 900px;
+    margin: 64px auto 0;
+    padding: 36px 24px;
+    background: #fff;
+    border: 1px solid rgba(139, 94, 76, 0.10);
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(74, 58, 50, 0.04);
+}
+.avaliacao-funcoes h3,
+.avaliacao-publico h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #794733;
+    margin-bottom: 10px;
+}
+.avaliacao-funcoes > p,
+.avaliacao-publico p {
+    color: #8b6f63;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+.avaliacao-funcoes-lista {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px 12px;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 0;
+}
 
+.avaliacao-funcoes-lista li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 105px;
+    padding: 16px 8px;
+    background: #fdf6f1;
+    border-radius: 16px;
+    color: #8b5e4c;
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.avaliacao-funcoes-lista li i {
+    font-size: 1.35rem;
+    color: #a87968;
+}
+
+.avaliacao-funcoes-lista li:hover {
+    background: #f4d9cf;
+    transform: translateY(-4px);
+}
+
+/* PÚBLICO ATENDIDO */
+
+.avaliacao-publico {
+    max-width: 760px;
+    margin: 36px auto 0;
+    padding: 0 12px;
+    text-align: center;
+}
+
+.avaliacao-publico h3 {
+    margin-bottom: 12px;
+}
+
+/* ETAPAS DO PROCESSO */
+.avaliacao-processo {
+    max-width: 1000px;
+    margin: 90px auto 0;
+}
+
+.avaliacao-processo-intro {
+    max-width: 650px;
+    margin: 0 auto 44px;
+    text-align: center;
+}
+
+.avaliacao-processo-intro .section-tag {
+    margin-top: 0;
+}
+.avaliacao-processo-intro h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    font-weight: 500;
+    line-height: 1.1;
+    color: #794733;
+    margin-bottom: 14px;
+}
+.avaliacao-processo-intro p {
+    color: #8b6f63;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.avaliacao-etapas {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+}
+
+.avaliacao-etapa {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 26px 22px;
+    background: #fff;
+    border: 1px solid rgba(139, 94, 76, 0.10);
+    border-radius: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.avaliacao-etapa-numero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #d8b8aa;
+    border-radius: 50%;
+    color: #8b5e4c;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.avaliacao-etapa-conteudo {
+    padding-top: 2px;
+}
+.avaliacao-etapa-conteudo h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #794733;
+    margin-bottom: 8px;
+}
+
+.avaliacao-etapa-conteudo p {
+    color: #8b6f63;
+    font-size: 0.88rem;
+    line-height: 1.75;
+}
+
+/* CTA FINAL */
+.avaliacao-cta {
+    max-width: 800px;
+    margin: 80px auto 0;
+    padding: 48px 24px;
+    background: #8b5e4c;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(139, 94, 76, 0.14);
+}
+.avaliacao-cta .section-tag {
+    color: #f4d9cf;
+    margin-top: 0;
+}
+.avaliacao-cta h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.2rem, 7vw, 3.2rem);
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 12px;
+}
+.avaliacao-cta p {
+    max-width: 580px;
+    margin: 0 auto 28px;
+    color: #fdf6f1;
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+.avaliacao-cta .btn-primary {
+    background: #fdf6f1;
+    color: #794733;
+    box-shadow: none;
+}
+
+.avaliacao-cta .btn-primary:hover {
+    background: #f4d9cf;
+    color: #794733;
+    transform: translateY(-3px);
+}
 /* REVEAL */
 .reveal { opacity: 0; transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
 .reveal--up { transform: translateY(24px); }
@@ -812,7 +1033,10 @@ a { text-decoration: none; color: inherit; }
     font-weight: 600;
     margin-bottom: 4px;
 }
-.info-item dd { margin: 0; }
+.info-item dd {
+    margin: 0;
+    color: #8b6f63;
+}
 
 .info-item dd a {
     color: #8b6f63;
@@ -1043,6 +1267,23 @@ a { text-decoration: none; color: inherit; }
     .sobre { padding-top: 100px; padding-bottom: 100px; }
     .sobre-image-wrapper { max-width: 560px; }
     .sobre-trajetoria { margin-top: 90px; }
+
+    .avaliacao {
+        padding: 96px 0;
+    }
+    .avaliacao-funcoes {
+        padding: 42px 36px;
+    }
+    .avaliacao-funcoes-lista {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+    }
+    .avaliacao-etapa {
+        padding: 30px;
+    }
+    .avaliacao-cta {
+        padding: 56px 40px;
+    }
 }
 
 /* ---- md: 768px+ ---- */
@@ -1111,6 +1352,42 @@ a { text-decoration: none; color: inherit; }
     .sobre-image-wrapper { max-width: 720px; margin-top: 60px; }
     .sobre-trajetoria { gap: 60px; margin-top: 110px; }
     .sobre-timeline { gap: 42px; }
+
+    .avaliacao {
+        padding: 110px 0;
+    }
+    .avaliacao-descricao {
+        font-size: 1rem;
+    }
+    .avaliacao-funcoes {
+        margin-top: 76px;
+        padding: 48px;
+    }
+    .avaliacao-funcoes-lista li {
+        min-height: 120px;
+        font-size: 0.9rem;
+    }
+    .avaliacao-publico {
+        margin-top: 36px;
+    }
+    .avaliacao-processo {
+        margin-top: 110px;
+    }
+    .avaliacao-etapas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+    .avaliacao-etapa {
+        min-height: 190px;
+    }
+    .avaliacao-etapa:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 14px 32px rgba(74, 58, 50, 0.07);
+    }
+    .avaliacao-cta {
+        margin-top: 100px;
+        padding: 64px 60px;
+    }
 
     .contato-info { grid-template-columns: 1fr 1fr; }
     .contato-social-section {
@@ -1232,13 +1509,31 @@ a { text-decoration: none; color: inherit; }
         max-width: 48%;
         padding-left: clamp(60px, 9vw, 160px);
     }
-
     .hero {
         background-position: center center, 75% center;
     }
-
     .hero-title { font-size: clamp(4rem, 5vw, 5.5rem); }
     .hero-subtitle { font-size: 1.15rem; max-width: 520px; }
+
+    .section-subtitle { font-size: 1.1rem; }
+    .acolhimento-text p { font-size: 1.07rem; }
+    .servico-linha-texto p { font-size: 0.97rem; }
+    .sobre-timeline-content p,
+    .sobre-text p { font-size: 1.05rem; }
+    .publico-card p,
+    .container-privacidade p { font-size: 1.05rem; }
+    .avaliacao-subtitle { font-size: 1.5rem; }
+    .avaliacao-descricao,
+    .avaliacao-processo-intro p { font-size: 1rem; }
+    .avaliacao-funcoes > p,
+    .avaliacao-publico p,
+    .avaliacao-cta p { font-size: 0.97rem; }
+    .avaliacao-etapa-conteudo p { font-size: 0.93rem; }
+    .contato-social-texto { font-size: 1rem; }
+    .footer__brand p { font-size: 1.15rem; }
+    .footer__bottom p {
+        font-size: clamp(0.8rem, 0.77rem + 0.15vw, 0.9rem);
+    }
 
     .section-tag { margin-top: 0; }
 
@@ -1261,8 +1556,38 @@ a { text-decoration: none; color: inherit; }
     }
     .sobre-timeline { gap: 56px; }
     .sobre-text { max-width: 700px; margin-top: 130px; }
-}
 
+    .avaliacao {
+        padding: 130px 0;
+    }
+    .avaliacao-funcoes {
+        max-width: 1000px;
+    }
+    .avaliacao-processo-intro h3 {
+        white-space: nowrap;
+    }
+    .avaliacao-processo {
+        width: 100vw;
+        max-width: none;
+        margin: 110px calc(50% - 50vw) 0;
+        padding: 0 clamp(24px, 5vw, 80px);
+    }
+    .avaliacao-etapas {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 26px;
+    }
+    .avaliacao-etapa {
+        flex-direction: column;
+        gap: 16px;
+        padding: 34px;
+    }
+    .avaliacao-etapa-conteudo {
+        padding-top: 0;
+    }
+    .avaliacao-cta {
+        margin-top: 120px;
+    }
+}
 /* ---- 1440px+ ---- */
 @media (min-width: 1440px) {
     .hero-content { padding-left: 10vw; }
@@ -1279,4 +1604,14 @@ a { text-decoration: none; color: inherit; }
     .acolhimento-image:hover img { transform: none; }
     .sobre-image { transition: none; }
     .sobre-image-wrapper:hover .sobre-image { transform: none; }
+    .avaliacao-funcoes-lista li,
+    .avaliacao-etapa,
+    .avaliacao-cta .btn-primary {
+        transition: none;
+    }
+    .avaliacao-funcoes-lista li:hover,
+    .avaliacao-etapa:hover,
+    .avaliacao-cta .btn-primary:hover {
+        transform: none;
+    }
 }
